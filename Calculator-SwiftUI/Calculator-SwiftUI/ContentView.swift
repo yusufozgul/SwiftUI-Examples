@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  FirstView.swift
 //  Calculator-SwiftUI
 //
 //  Created by Yusuf Özgül on 9.07.2019.

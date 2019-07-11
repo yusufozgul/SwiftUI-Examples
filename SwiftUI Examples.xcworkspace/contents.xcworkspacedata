@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:PresentAnotherView/PresentAnotherView.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:TodoList-SwiftUI/TodoList-SwiftUI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Calculator-SwiftUI/Calculator-SwiftUI.xcodeproj">
    </FileRef>
 </Workspace>
