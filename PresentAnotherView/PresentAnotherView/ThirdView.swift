@@ -18,7 +18,7 @@ struct ThirdView : View
                 List
                     {
                         ForEach(listElement.identified(by: \.self)) { element in
-                            NavigationLink(destination: FourthView())
+                            NavigationLink(destination: FourthView(city: element))
                             {
                                 ThridViewRow(city: element)
                             }
