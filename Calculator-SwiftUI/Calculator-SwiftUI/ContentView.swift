@@ -34,27 +34,26 @@ struct ContentView : View {
                 Divider()
             }
             
-            ForEach((0...4)) { firstIndex in
+            ForEach(0...4, id: \.self) { firstIndex in
                 HStack(alignment: .bottom)
                 {
-                    ForEach((0...3)) { secondIndex in
-                        ZStack {
+                    ForEach(0...3, id: \.self) { secondIndex in
+                        ZStack
+                        {
                             Circle()
                                 .frame(width: 75, height: 75, alignment: .center)
                                 .foregroundColor(self.getColor(firstIndex: firstIndex, secondIndex: secondIndex))
                                 .padding(10)
-                                .tapAction {
+                                .onTapGesture {
                                     self.touchButton(button: self.buttonsText[(firstIndex * 4) + secondIndex])
                             }
-                            
                             Text(self.buttonsText[(firstIndex * 4) + secondIndex])
-                                //                                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
-                                .color(.white)
+                                .foregroundColor(.white)
                                 .bold()
                                 .font(.title)
-                                .tapAction { // :(
-                                    self.touchButton(button: self.buttonsText[(firstIndex * 4) + secondIndex])
-                            }
+                                .onTapGesture {
+                                        self.touchButton(button: self.buttonsText[(firstIndex * 4) + secondIndex])
+                                }
                         }
                     }
                 }

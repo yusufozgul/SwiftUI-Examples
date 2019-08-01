@@ -8,9 +8,10 @@
 
 import SwiftUI
 
-struct toDoView : View
+
+struct TodoListView2: View
 {
-    @Environment(\.isPresented) private var isPresented
+    @Environment(\.presentationMode) private var isPresented
     let imageNames = ["red", "blue", "pink" , "green", "yellow", "gray"]
     
     @State var title: String
@@ -22,15 +23,15 @@ struct toDoView : View
     
     var body: some View
     {
-        VStack(alignment: .center) {
-            
+        VStack
+        {
             Spacer()
                 .frame(height: 30.0)
             if isNew
             {
                 ScrollView(.horizontal) {
                     HStack {
-                        ForEach(0...5) { index in
+                        ForEach(0...5, id: \.self) { index in
                             ZStack {
                                 Circle()
                                     .frame(width: 70, height: 70, alignment: .center)
@@ -40,7 +41,7 @@ struct toDoView : View
                                     .foregroundColor(.white)
                                 Image(self.imageNames[index])
                                     .frame(width: 100, height: 100, alignment: .center)
-                                    .tapAction {
+                                    .onTapGesture {
                                         self.selectedImage = Image(self.imageNames[index])
                                         self.selectImage(index)
                                 }
@@ -55,14 +56,13 @@ struct toDoView : View
                     .frame(width: 100, height: 100, alignment: .center)
             }
             
-            
             HStack {
                 Text("Title")
                     .bold()
                     .padding()
                 TextField("Enter Text", text: $title)
             }
-            
+
             HStack {
                 Text("Detail")
                     .bold()
@@ -70,10 +70,13 @@ struct toDoView : View
                 TextField("Enter Detail", text: $detail)
             }
             
-            DatePicker(
-                $date,
-                maximumDate: Date()
-            )
+            
+            
+//            DatePicker(
+//                $date,
+//                maximumDate: Date()
+//            )
+            DatePicker("Tarih Seçin", selection: $date)
 
             Spacer()
             if isNew
@@ -85,13 +88,13 @@ struct toDoView : View
                                                  desc: self.detail,
                                                  title: self.title,
                                                  image: self.selectedImage ?? Image("red"))
-                        
+
                         toDoListManager.shared.save(data: data)
                         self.detail = ""
                         self.title = ""
                         self.selectedImage = nil
                         self.imageFrameImages = [.clear, .clear, .clear, .clear, .clear, .clear]
-                        self.isPresented?.value = false
+                        self.isPresented.value.dismiss()
                     }
                 }) {
                     Text("Add")
@@ -100,15 +103,16 @@ struct toDoView : View
                         .padding()
                 }
             }
-            
+
             Spacer()
+            
         }
     }
-    
+        
     func selectImage(_ index: Int)
     {
         imageFrameImages = [.clear, .clear, .clear, .clear, .clear, .clear]
-        
+    
         switch index {
         case 0:
             imageFrameImages[index] = Color(red:0.88, green:0.26, blue:0.32)
@@ -129,9 +133,9 @@ struct toDoView : View
 }
 
 #if DEBUG
-struct toDoView_Previews : PreviewProvider {
+struct TodoListView2_Previews : PreviewProvider {
     static var previews: some View {
-        toDoView(title: "", detail: "", selectedImage: nil)
+        TodoListView2(title: "", detail: "")
     }
 }
 #endif

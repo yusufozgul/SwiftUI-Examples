@@ -13,25 +13,33 @@ import SwiftUI
 struct ContentView : View
 {
     @State var toDoList: [toDoData] = []
+    @State var isPresented = false
     var body: some View
     {
         NavigationView
             {
             VStack
                 {
-                PresentationLink(destination: toDoView(title: "", detail: "", isNew: true))
-                {
-                    Text("Add New")
-                        .color(Color.green)
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom)
-                }
+//                PresentationLink(destination: toDoView(title: "", detail: "", isNew: true))
+//                {
+//                    Text("Add New")
+//                        .color(Color.green)
+//                        .multilineTextAlignment(.center)
+//                        .padding(.bottom)
+//                }
+                    Button(action: {
+                        self.isPresented.toggle()
+                        
+                    }) {
+                        Text("Add New")
+                            .foregroundColor(Color.green)
+                            .padding(.bottom)
+                    }
                 
                 List
                 {
-                    ForEach(toDoList.identified(by: \.title)) { element in
-                        
-                        NavigationLink(destination: toDoView(title: element.title,
+                    ForEach(toDoList, id: \.title) { element in
+                        NavigationLink(destination: TodoListView2(title: element.title,
                                                              detail: element.desc,
                                                              date: element.date.stringToDate(),
                                                              selectedImage: element.image)
@@ -46,7 +54,8 @@ struct ContentView : View
                     .navigationBarTitle("Todo List")
                     .navigationBarItems(trailing: EditButton())
             }
-            .onAppear {
+                .sheet(isPresented: $isPresented, content: { TodoListView2(title: "", detail: "", isNew: true) })
+                .onAppear {
                 toDoListManager.shared.delegate = self
                 }
         }
