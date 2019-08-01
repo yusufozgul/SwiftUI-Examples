@@ -11,10 +11,15 @@ import SwiftUI
 struct FirstView : View {
     var body: some View {
         NavigationView {
-            NavigationLink(destination: SecondView())
-            {
-                Text("Navigation Link kullanarak diğer sayfaya geçin")
+            
+            VStack {
+                Text("First View")
+                NavigationLink(destination: SecondView())
+                {
+                    Text("Navigation Link kullanarak diğer sayfaya geçin")
+                }
             }
+            
                 .navigationBarTitle("İlk Ekran")
         }
     }

@@ -1,5 +1,5 @@
 //
-//  ThridViewRow.swift
+//  ThirdViewRow.swift
 //  PresentAnotherView
 //
 //  Created by Yusuf Özgül on 10.07.2019.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ThridViewRow : View {
+struct ThirdViewRow : View {
     var city: String
     var body: some View {
         Text(city)
@@ -18,7 +18,7 @@ struct ThridViewRow : View {
 #if DEBUG
 struct ThridViewRow_Previews : PreviewProvider {
     static var previews: some View {
-        ThridViewRow(city: "City")
+        ThirdViewRow(city: "City")
     }
 }
 #endif

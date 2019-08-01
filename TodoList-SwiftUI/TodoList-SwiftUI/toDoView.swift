@@ -95,7 +95,7 @@ struct toDoView : View
                     }
                 }) {
                     Text("Add")
-                        .color(.red)
+                        .foregroundColor(.red)
                         .font(.system(size: 20))
                         .padding()
                 }

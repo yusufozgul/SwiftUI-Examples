@@ -13,14 +13,14 @@ struct ThirdView : View
     var listElement = ["Antalya", "İzmir", "İstanbul", "Ankara", "Muğla", "Çanakkale", "Bursa", "Adana"]
     var body: some View
     {
-        return NavigationView
+        NavigationView
             {
                 List
                     {
-                        ForEach(listElement.identified(by: \.self)) { element in
+                        ForEach(listElement, id: \.self) { element in
                             NavigationLink(destination: FourthView(city: element))
                             {
-                                ThridViewRow(city: element)
+                                ThirdViewRow(city: element)
                             }
                         }
                         .navigationBarTitle(Text("Bir Şehir Seçin"))
@@ -28,6 +28,20 @@ struct ThirdView : View
         }
     }
 }
+
+struct Citys: Identifiable
+{
+    var id = UUID()
+    var city: String
+}
+var cityArray = [Citys(city: "Antalya"),
+                 Citys(city: "İzmir"),
+                 Citys(city: "İstanbul"),
+                 Citys(city: "Ankara"),
+                 Citys(city: "Muğla"),
+                 Citys(city: "Çanakkale"),
+                 Citys(city: "Bursa"),
+                 Citys(city: "Adana")]
 
 #if DEBUG
 struct ThirdView_Previews : PreviewProvider {

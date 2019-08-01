@@ -16,7 +16,7 @@
 		886496D422D63F5800CA2A51 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886496D322D63F5800CA2A51 /* SecondView.swift */; };
 		886496D622D643A700CA2A51 /* ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886496D522D643A700CA2A51 /* ThirdView.swift */; };
 		886496D822D66D4600CA2A51 /* FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886496D722D66D4600CA2A51 /* FourthView.swift */; };
-		886496DA22D66F6700CA2A51 /* ThridViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886496D922D66F6700CA2A51 /* ThridViewRow.swift */; };
+		886496DA22D66F6700CA2A51 /* ThirdViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886496D922D66F6700CA2A51 /* ThirdViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		886496D322D63F5800CA2A51 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		886496D522D643A700CA2A51 /* ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdView.swift; sourceTree = "<group>"; };
 		886496D722D66D4600CA2A51 /* FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthView.swift; sourceTree = "<group>"; };
-		886496D922D66F6700CA2A51 /* ThridViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThridViewRow.swift; sourceTree = "<group>"; };
+		886496D922D66F6700CA2A51 /* ThirdViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 				886496C322D63F1D00CA2A51 /* FirstView.swift */,
 				886496D322D63F5800CA2A51 /* SecondView.swift */,
 				886496D522D643A700CA2A51 /* ThirdView.swift */,
-				886496D922D66F6700CA2A51 /* ThridViewRow.swift */,
+				886496D922D66F6700CA2A51 /* ThirdViewRow.swift */,
 				886496D722D66D4600CA2A51 /* FourthView.swift */,
 				886496C522D63F1F00CA2A51 /* Assets.xcassets */,
 				886496CA22D63F1F00CA2A51 /* LaunchScreen.storyboard */,
@@ -162,7 +162,7 @@
 				886496D622D643A700CA2A51 /* ThirdView.swift in Sources */,
 				886496C222D63F1D00CA2A51 /* SceneDelegate.swift in Sources */,
 				886496D422D63F5800CA2A51 /* SecondView.swift in Sources */,
-				886496DA22D66F6700CA2A51 /* ThridViewRow.swift in Sources */,
+				886496DA22D66F6700CA2A51 /* ThirdViewRow.swift in Sources */,
 				886496D822D66D4600CA2A51 /* FourthView.swift in Sources */,
 				886496C422D63F1D00CA2A51 /* FirstView.swift in Sources */,
 			);
