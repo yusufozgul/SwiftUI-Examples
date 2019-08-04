@@ -14,8 +14,9 @@ struct ContentView : View {
                        "4", "5", "6", "-",
                        "1", "2", "3", "+",
                        "0", "00", ".", "="]
-    @State var screenValue = "0"
     var calculator = Calculator()
+    @State var screenValue = "0"
+    
     
     var body: some View {
         VStack {
