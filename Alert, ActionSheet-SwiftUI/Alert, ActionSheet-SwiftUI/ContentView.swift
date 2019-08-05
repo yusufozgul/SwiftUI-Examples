@@ -36,7 +36,10 @@ struct ContentView: View
             Alert(
                 title: Text("Title"),
                 message: Text("message"),
-                dismissButton: .default(Text("Ok!"))
+                primaryButton: .default(Text("Ok!")),
+                secondaryButton: .default(Text("Button"), action: {
+                    print("Button")
+                })
             )
         }
         .actionSheet(isPresented: $isShowActionSheet) {
