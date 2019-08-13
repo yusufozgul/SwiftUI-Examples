@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:GithubRepoFinder-Combine-SwiftUI/GithubRepoFinder-Combine-SwiftUI.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Alert, ActionSheet-SwiftUI/Alert, ActionSheet-SwiftUI.xcodeproj">
    </FileRef>
    <FileRef

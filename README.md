@@ -2,6 +2,11 @@
 
 ### SwiftUI Exapmle Apps
 - [X] Calculator
+- [X] Todo List
+- [X] Present Views
+- [X] Alert, ActionSheet
+- [ ] GitHub Repo Finder
+
 
 
 
